@@ -1,0 +1,5 @@
+attr_name	display_label	value	field_type
+$O.C	Цех	50	int
+$O.U	Участок	123	int
+$O.T	Инструмент	32	string
+$Z.L	Длина заготовки	10	int
