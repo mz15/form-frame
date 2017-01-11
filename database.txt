@@ -1,5 +1,5 @@
-п»їattr_name	display_label	value	field_type
-$O.C	Р¦РµС…	50	int
-$O.U	РЈС‡Р°СЃС‚РѕРє	123	int
-$O.T	РРЅСЃС‚СЂСѓРјРµРЅС‚	32	string
-$Z.L	Р”Р»РёРЅР° Р·Р°РіРѕС‚РѕРІРєРё	10	int
+attr_name	display_label	value	field_type
+$O.C	Цех	50	int
+$O.U	Участок	123	int
+$O.T	Инструмент	32	string
+$Z.L	Длина заготовки	10	int
