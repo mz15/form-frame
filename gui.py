@@ -7,6 +7,7 @@ def result_window(event):  # Функция окна результатов
     res_window.title("Результат операции")
     res_window.minsize(width=300, height=100)
 
+    # TODO Функция сохранения данных
     result_text = Label(res_window, text='Данные приняты')  # display_label
     result_text.pack()
 
@@ -35,9 +36,7 @@ btn.bind("<Button-1>", result_window)  # Вызов функции по нажа
 # Пример: формат, в котором должны быть получены данные для заполнения полей
 list_form = [
     ['$O.C', 'Цех', '50', 'int'],
-    ['$O.U', 'Участок', '123', 'int'],
-    ['$O.T', 'Инструмент', '32', 'string'],
-    ['$Z.L', 'Длина заготовки', '10', 'int']
+    ['$O.U', 'Участок', '123', 'int']
 ]
 """
 # Создание полей
