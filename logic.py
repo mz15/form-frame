@@ -25,10 +25,17 @@ while True:  # Цикл, пока ввод не будет корректен
 
     # Контроль ввода
     try:
-        request = input('\nEnter your request. Format: $<prefix>.<name>=<value>\n')
+        request = input("""
+Введите заявки в формате: $Prefix.Name=Value;
+Если в качестве Value задать двоеточие, пробел, или оставить пустым,
+то в поле фрейм-анкеты значение будет взято из базы данных, иначе будет использовано введенное значение.
+Возможен ввод нескольких заявок сразу.
+"""
+                        )
+
         form = re.search(r'(\$[A-Za-z]+.[A-Za-z]+=[A-Za-zА-Яа-яЁё0-9 :?.()]*;)+', request)
         # TODO Исправить регулярное выражение - возможен некорректный ввод после первого триплета
-        # TODO Добавить распознавание ввода не только триплетов-фактов, но и триплетов-целей
+        # TODO Подумать над распознаванием ввода триплетов-фактов и триплетов-целей
         request_form = form.group(0)
 
         # file = 'requests.txt'
@@ -36,7 +43,10 @@ while True:  # Цикл, пока ввод не будет корректен
         #     f.write(request_form)
 
         """ Пример запроса:
-        # $O.C=50;$O.U=123;
+        $O.C=30;$O.U=11;
+        $O.C=;$O.U=:;
+        $O.C=;$O.U=12;
+        $O.C=11;$O.U=:;
         """
 
         request_list1 = re.split(';', request_form)
@@ -75,6 +85,19 @@ for a in range(len(database)):
             list_form_single = []
             list_form_single.append(database[a][0])
             list_form_single.append(database[a][1])
-            list_form_single.append(database[a][2])
+
+            if request_list[b][1] == ':' or request_list[b][1] == ' ' or request_list[b][1] == '':
+                list_form_single.append(database[a][2])
+            else:
+                list_form_single.append(request_list[b][1])
+
             list_form_single.append(database[a][3])
             list_form.append(list_form_single)
+"""
+# Пример результата:
+list_form = [
+    ['$O.C', 'Цех', '50', 'int'],
+    ['$O.U', 'Участок', '123', 'int']
+]
+"""
+
