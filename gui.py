@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from tkinter import Tk, Frame, Label, Entry, Button
 
 def result_window(event):  # Функция окна результатов
