@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from tkinter import Tk, Frame, Label, Entry, Button
+from logic import *
 
 def result_window(event):  # Функция окна результатов
     res_window = Tk()
@@ -22,13 +23,15 @@ fields_frame.pack()
 
 btn = Button(btn_frame,
              text="Принять",  # Надпись на кнопке
-             # width=10, height=3,  # Ширина и высота
+             width=20  # Ширина
+             # height=3,  # Высота
              # bg = "grey",
              # fg = "blue"  # Цвет фона и надписи
              )
 btn.grid(row=0, column=0, padx=0, pady=10)
 btn.bind("<Button-1>", result_window)  # Вызов функции по нажатию на кнопку
 
+"""
 # Пример: формат, в котором должны быть получены данные для заполнения полей
 list_form = [
     ['$O.C', 'Цех', '50', 'int'],
@@ -36,7 +39,7 @@ list_form = [
     ['$O.T', 'Инструмент', '32', 'string'],
     ['$Z.L', 'Длина заготовки', '10', 'int']
 ]
-
+"""
 # Создание полей
 number = 1
 for line in list_form:
