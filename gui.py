@@ -7,7 +7,7 @@ def result_window(event):  # Функция окна результатов
     res_window.title("Результат операции")
     res_window.minsize(width=300, height=100)
 
-    # TODO Функция сохранения данных
+    # TODO Функция проверки и сохранения данных
     result_text = Label(res_window, text='Данные приняты')  # display_label
     result_text.pack()
 

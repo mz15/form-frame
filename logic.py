@@ -86,6 +86,7 @@ for a in range(len(database)):
             list_form_single.append(database[a][0])
             list_form_single.append(database[a][1])
 
+            # Проверка Value в заявке
             if request_list[b][1] == ':' or request_list[b][1] == ' ' or request_list[b][1] == '':
                 list_form_single.append(database[a][2])
             else:
@@ -101,3 +102,21 @@ list_form = [
 ]
 """
 
+# Проверка ввода значений в текстовые поля фрейм-анкеты
+def input_check():
+    # TODO сделать
+    pass
+
+# Сохранение введенных значений в текстовых полях фрейм-анкеты
+def saving_data():
+    # TODO сделать
+    # number = 1
+    for number in range(len(list_form)):
+        # print('$prefix.name:', line[0]
+        # print('Отображаемое имя:', line[1])
+        # print('Значение:', line[2])
+        # print('Тип:', line[3])
+
+        globals()['entry%d' % number].get()  # Получение значения из текстового поля
+
+        number += 1
