@@ -29,6 +29,6 @@
 
 ### Пример работы программы
 
-![](Example/1.jpg)
-![](Example/2.jpg)
-![](Example/3.jpg)
+![](Example/1.PNG)
+![](Example/2.PNG)
+![](Example/3.PNG)
