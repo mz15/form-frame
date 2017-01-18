@@ -1,43 +1,43 @@
 # -*- coding: utf-8 -*-
 from tkinter import Tk, Frame, Label, Entry, Button
-from logic import request_input, saving_data
+from logic import request_input, create_list_form, saving_data
 
 request_input()
+list_form = create_list_form()
 
 def result_window(event):  # Функция окна результатов
     res_window = Tk()
     res_window.title("Результат операции")
-    res_window.minsize(width=300, height=100)
-
+#    res_window.minsize(width=300, height=100)
+    error_number = 1
     for number, line in enumerate(list_form):
         value = globals()['entry%d' % number].get()  # Получение значения из текстового поля
+
         try:
             if list_form[number][3] == 'int':
                 int(value)
+
         except ValueError:
-            message = str('Ошибка. Значение в поле "' + list_form[number][1] +
-                          '" не соответствует типу данных ' + list_form[number][3])
+            message_result = str('Данные не приняты.\nСписок ошибок:')
+            result_text = Label(res_window, text=message_result)
+            result_text.grid(row=0, column=0, padx=20, pady=5)
 
-    # TODO Функция проверки и сохранения данных
-    result_text = Label(res_window, text=message)  # display_label
-    result_text.pack()
-    res_window.mainloop()
-    # saving_data(list_form)
+            message = str(str(error_number) + '. Значение в поле "' + list_form[number][1] +
+                          '" не соответствует типу данных "' + list_form[number][3] + '".')
 
+            globals()['error%d' % number] = Label(res_window, text=message)
+            globals()['error%d' % number].grid(row=number+1, column=0, padx=20, pady=1)
+            error_number += 1
 
-"""
-    list_result = []
-    for number, line in enumerate(list_form):
-        list_result_single = []
-        list_result_single.append(list_form[number][0])
-        list_result_single.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
-        list_result.append(list_result_single)
+    if error_number == 1:
         file = 'result.txt'
-        with open(file, 'w') as f:
-            f.write(str(list_result))
-"""
+        message_result = str('Данные приняты и сохранены в файле "' + file + '".')
+        result_text = Label(res_window, text=message_result)
+        result_text.grid(row=0, column=0, padx=20, pady=25)
 
+    #saving_data()
 
+    res_window.mainloop()
 
 main_window = Tk()
 main_window.title("Фрейм-анкета")
@@ -68,32 +68,11 @@ list_form = [
 
 # Создание полей
 for number, line in enumerate(list_form):
-    # print('$prefix.name:', line[0]
-    # print('Отображаемое имя:', line[1])
-    # print('Значение:', line[2])
-    # print('Тип:', line[3])
-
     globals()['label%d' % number] = Label(fields_frame, text=line[1])  # display_label
     globals()['label%d' % number].grid(row=number, column=0, padx=20, pady=5)
 
     globals()['entry%d' % number] = Entry(fields_frame, width=50, bd=2)  # value
     globals()['entry%d' % number].grid(row=number, column=1, padx=20, pady=5)
     globals()['entry%d' % number].insert(0, line[2])  # Значение по умолчанию (введенное или из базы данных)
-
-    # TODO  проверка ввода на соответствие нужному типу данных
-"""
-list_result = []
-for number, line in enumerate(list_form):
-    # print('$prefix.name:', line[0]
-    # print('Отображаемое имя:', line[1])
-    # print('Значение:', line[2])
-    # print('Тип:', line[3])
-    list_result.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
-
-    file = 'result.txt'
-    with open(file, 'w') as f:
-        f.write(str(list_result))
-
-"""
 
 main_window.mainloop()

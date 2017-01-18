@@ -4,6 +4,7 @@ import re
 def request_input():
     with open('database.txt', 'r') as db:
         # Переформатирование базы данных - создание списка списков
+        global database, request_list
         database = []
         for line in db:
             database += [re.split('\t', line)]
@@ -74,8 +75,9 @@ def request_input():
         #    print('\nENTER SOMETHING\n')
         #    #continue
 
+def create_list_form():
     # Создания списка с данными для заполнения полей фрейм-анкеты
-    # global list_form
+    global list_form
     list_form = []
     for a in range(len(database)):
         for b in range(len(request_list)):
@@ -99,7 +101,7 @@ def request_input():
         ['$O.U', 'Участок', '123', 'int']
     ]
     """
-
+    return list_form
 # Проверка ввода значений в текстовые поля фрейм-анкеты
 def input_check():
     # TODO доделать
@@ -110,7 +112,7 @@ def input_check():
 
 
 # Сохранение введенных значений в текстовых полях фрейм-анкеты
-def saving_data(list_form):
+def saving_data():
     # TODO доделать
 
     list_result = []
@@ -125,4 +127,4 @@ def saving_data(list_form):
         list_result_single.append(list_result)
         file = 'result.txt'
         with open(file, 'w') as f:
-            f.write(list_result)
+            f.write(str(list_result))
