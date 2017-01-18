@@ -33,6 +33,8 @@ def result_window(event):  # Функция окна результатов
         try:
             if list_form[number][3] == 'int':
                 int(value)
+            if list_form[number][3] == 'float':
+                float(value)
 
         except ValueError:
             message_result = str('Данные не приняты.\nСписок ошибок:')

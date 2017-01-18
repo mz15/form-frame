@@ -2,4 +2,11 @@ attr_name	display_label	value	field_type
 $O.C	Цех	50	int
 $O.U	Участок	123	int
 $O.T	Инструмент	Фрезерный станок	string
-$Z.L	Длина заготовки	10	int
+$Z.L	Длина заготовки	10	float
+$Z.B	Ширина заготовки	10	float
+$Z.D	Диаметр заготовки	10	float
+$Z.K	Код заготовки	10	int
+$Z.MAS	Масса заготовки	10	float
+$Z.STS	Толщина стенки заготовки	10	float
+$Z.TW1	Твердость min	10	int
+$Z.TW2	Твердость max	10	int
