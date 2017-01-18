@@ -1,18 +1,31 @@
 # -*- coding: utf-8 -*-
 from tkinter import Tk, Frame, Label, Entry, Button
-from logic import *
+from logic import request_input, saving_data
+
+request_input()
 
 def result_window(event):  # Функция окна результатов
     res_window = Tk()
     res_window.title("Результат операции")
     res_window.minsize(width=300, height=100)
 
+    for number, line in enumerate(list_form):
+        value = globals()['entry%d' % number].get()  # Получение значения из текстового поля
+        try:
+            if list_form[number][3] == 'int':
+                int(value)
+        except ValueError:
+            message = str('Ошибка. Значение в поле "' + list_form[number][1] +
+                          '" не соответствует типу данных ' + list_form[number][3])
+
     # TODO Функция проверки и сохранения данных
-    result_text = Label(res_window, text='Данные приняты')  # display_label
+    result_text = Label(res_window, text=message)  # display_label
     result_text.pack()
+    res_window.mainloop()
+    # saving_data(list_form)
 
-    # saving_data()
 
+"""
     list_result = []
     for number, line in enumerate(list_form):
         list_result_single = []
@@ -22,8 +35,8 @@ def result_window(event):  # Функция окна результатов
         file = 'result.txt'
         with open(file, 'w') as f:
             f.write(str(list_result))
+"""
 
-    res_window.mainloop()
 
 
 main_window = Tk()
