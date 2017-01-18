@@ -2,7 +2,8 @@
 import re
 
 def request_input():
-    with open('database.txt', 'r') as db:
+    database_file = 'database.txt'
+    with open(database_file, 'r') as db:
         # Переформатирование базы данных - создание списка списков
         global database, request_list
         database = []
@@ -14,23 +15,12 @@ def request_input():
             if database[i][-1][-1] == '\n':
                 database[i][-1] = database[i][-1][:-1]
 
-        """
-        Пример результата:
-        database = [
-            ['attr_name', 'display_label', 'value', 'field_type'],
-            ['$O.C', 'Цех', '50', 'int'],
-            ['$O.U', 'Участок', '123', 'int']
-        ]
-        """
-
     while True:  # Цикл, пока ввод не будет корректен
 
         # Контроль ввода
         try:
             request = input("""
 Введите заявки в формате: $Prefix.Name=Value;
-Если в качестве Value задать двоеточие, пробел, или оставить пустым,
-то в поле фрейм-анкеты значение будет взято из базы данных, иначе будет использовано введенное значение.
 Возможен ввод нескольких заявок сразу.
 """
                             )
@@ -40,28 +30,16 @@ def request_input():
             # TODO Подумать над распознаванием ввода триплетов-фактов и триплетов-целей
             request_form = form.group(0)
 
-            # file = 'requests.txt'
-            # with open(file, 'w') as f:
-            #     f.write(request_form)
-
             """ Пример запроса:
-            $С.IST=:;$С.PGS=;$С.PGS2=;$D.D=;$D.L=;$D.MAS=;$D.OB=:;$D.SH=;$Z.L=;$Z.B=;$Z.D=;$Z.K=;$Z.MAS= ;$Z.STS=:;$Z.TW1= ;$Z.TW2=;
+            $C.IST=;$C.PGS=:;$C.PGS2=Точение;$D.D=:;$D.L=:;$D.MAS=:;$D.OB=;$D.SH=;$Z.L=22.5;$Z.K=:;$Z.STS=:;$Z.TW1= ;
             """
 
             request_list1 = re.split(';', request_form)
             request_list1.pop()
 
-            """ Пример результата:
-            request_list1 = ['$O.C=50', '$O.U=123']
-            """
-
             request_list = []
             for i in range(len(request_list1)):
                 request_list.append(re.split('=', request_list1[i]))
-
-            """ Пример результата:
-            request_list = [['$O.C', '50'], ['$O.U', '123']]
-            """
 
             break
 
@@ -69,11 +47,6 @@ def request_input():
         except AttributeError:
             print('Запрос введен в неверном формате. Повторите ввод.')
             continue
-
-        # Control of value
-        # except ValueError:
-        #    print('\nENTER SOMETHING\n')
-        #    #continue
 
 def create_list_form():
     # Создания списка с данными для заполнения полей фрейм-анкеты
@@ -99,20 +72,25 @@ def create_list_form():
                     list_form_single.append('')
 
                 list_form.append(list_form_single)
+
     """
     # Пример результата:
     list_form = [
-        ['$O.C', 'Цех', '50', 'int'],
-        ['$O.U', 'Участок', '123', 'int']
+    ['$C.PGS', 'Обрабатываемый материал', 'Сталь', 'string', '*'],
+    ['$C.PGS2', 'Способ обработки', 'Фрезерование', 'string', ''],
+    ['$D.D', 'Диаметр детали', '', 'float', '*'],
+    ['$D.SH', 'Значение шероховатости', '1.25', 'float', ''],
+    ['$Z.K', 'Код заготовки', '', 'int', ''],
+    ...
     ]
     """
+
     return list_form
 
 # Сохранение введенных значений в текстовых полях фрейм-анкеты
 def saving_data():
     list_result = []
     for number, line in enumerate(list_form):
-
         list_result_single = []
         list_result_single.append(list_form[number][0])
         list_result_single.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля

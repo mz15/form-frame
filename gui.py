@@ -103,13 +103,6 @@ btn = Button(btn_frame,
 btn.grid(row=0, column=0, padx=0, pady=10)
 btn.bind("<Button-1>", result_window)  # Вызов функции по нажатию на кнопку
 
-"""
-# Пример: формат, в котором должны быть получены данные для заполнения полей
-list_form = [
-    ['$O.C', 'Цех', '50', 'int'],
-    ['$O.U', 'Участок', '123', 'int']
-]
-"""
 # Создание полей
 for number, line in enumerate(list_form):
     globals()['label%d' % number] = Label(fields_frame, text=line[1])  # display_label
