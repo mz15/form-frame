@@ -48,7 +48,7 @@ def result_window(event):  # Функция окна результатов
                     if list_form[number][3] == 'float':
                         float(value)
 
-        except ValueError:
+        except ValueError:  # Если неверный тип данных
             message_result = str('Данные не приняты.\nСписок ошибок:')
             result_text = Label(res_window, text=message_result)
             result_text.grid(row=0, column=0, padx=20, pady=5)
@@ -61,7 +61,7 @@ def result_window(event):  # Функция окна результатов
             globals()['error%d' % number].grid(row=number+1, column=0, padx=20, pady=1)
             error_number += 1
 
-        except AttributeError:
+        except AttributeError:  # Если обязательное поле не заполнено
             message_result = str('Данные не приняты.\nСписок ошибок:')
             result_text = Label(res_window, text=message_result)
             result_text.grid(row=0, column=0, padx=20, pady=5)

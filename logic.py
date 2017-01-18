@@ -35,7 +35,7 @@ def request_input():
 """
                             )
 
-            form = re.search(r'(\$[A-Za-z]+.[A-Za-z]+=[A-Za-zА-Яа-яЁё0-9 :?.()]*;)+', request)
+            form = re.search(r'(\$[A-Za-z]+.[A-Za-z0-9]+=[A-Za-zА-Яа-яЁё0-9 :?.()]*;)+', request)
             # TODO Исправить регулярное выражение - возможен некорректный ввод после первого триплета
             # TODO Подумать над распознаванием ввода триплетов-фактов и триплетов-целей
             request_form = form.group(0)
@@ -45,7 +45,7 @@ def request_input():
             #     f.write(request_form)
 
             """ Пример запроса:
-            $O.C=30;$O.U=11;$O.T=;$O.U=:;$O.C=;$Z.L=12;$O.C=11;$O.U=:;
+            $С.IST=:;$С.PGS=;$С.PGS2=;$D.D=;$D.L=;$D.MAS=;$D.OB=:;$D.SH=;$Z.L=;$Z.B=;$Z.D=;$Z.K=;$Z.MAS= ;$Z.STS=:;$Z.TW1= ;$Z.TW2=;
             """
 
             request_list1 = re.split(';', request_form)

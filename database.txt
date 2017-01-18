@@ -1,12 +1,21 @@
 attr_name	display_label	value	field_type
-$O.C	Цех	50	int
-$O.U	Участок	123	int
-$O.T	Инструмент	Фрезерный станок	string
-$Z.L	Длина заготовки	10	float
-$Z.B	Ширина заготовки	10	float
-$Z.D	Диаметр заготовки	10	float
-$Z.K	Код заготовки	10	int
-$Z.MAS	Масса заготовки	10	float
-$Z.STS	Толщина стенки заготовки	10	float
-$Z.TW1	Твердость min	10	int
-$Z.TW2	Твердость max	10	int
+$C.IST	ГОСТ или ТУ		int
+$C.PGS	Обрабатываемый материал	Сталь	string
+$C.PGS2	Способ обработки	Фрезерование	string
+$D.D	Диаметр детали		float
+$D.L	Длина детали		float
+$D.MAS	Масса детали		float
+$D.OB	Обозначение детали		int
+$D.SH	Значение шероховатости	1.25	float
+$O.C	Цех	1	int
+$O.DIN	Диам. инст. наp. обp.	20.1	float
+$O.DIV	Диам. инст. вн. обp.	8.4	float
+$Z.L	Длина заготовки		float
+$Z.B	Ширина заготовки		float
+$Z.D	Диаметр заготовки		float
+$Z.K	Код заготовки		int
+$Z.MAS	Масса заготовки		float
+$Z.STS	Толщина стенки заготовки		float
+$Z.TW1	Твердость min		int
+$Z.TW2	Твердость max		int
+
