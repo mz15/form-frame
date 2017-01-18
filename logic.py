@@ -77,7 +77,6 @@ def request_input():
 
 def create_list_form():
     # Создания списка с данными для заполнения полей фрейм-анкеты
-    global list_form
     list_form = []
     for a in range(len(database)):
         for b in range(len(request_list)):
@@ -102,29 +101,16 @@ def create_list_form():
     ]
     """
     return list_form
-# Проверка ввода значений в текстовые поля фрейм-анкеты
-def input_check():
-    # TODO доделать
-    for number, line in enumerate(list_form):
-        value = globals()['entry%d' % number].get()  # Получение значения из текстового поля
-        if list_form[number][3] == 'int':
-            int(value)
-
 
 # Сохранение введенных значений в текстовых полях фрейм-анкеты
 def saving_data():
-    # TODO доделать
-
     list_result = []
     for number, line in enumerate(list_form):
-        # print('$prefix.name:', line[0]
-        # print('Отображаемое имя:', line[1])
-        # print('Значение:', line[2])
-        # print('Тип:', line[3])
+
         list_result_single = []
         list_result_single.append(list_form[number][0])
         list_result_single.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
-        list_result_single.append(list_result)
-        file = 'result.txt'
-        with open(file, 'w') as f:
-            f.write(str(list_result))
+        list_result.append(list_result_single)
+    file = 'result.txt'
+    with open(file, 'w') as f:
+        f.write(str(list_result))
