@@ -31,10 +31,22 @@ def result_window(event):  # Функция окна результатов
 
         # Контроль ввода
         try:
-            if list_form[number][3] == 'int':
-                int(value)
-            if list_form[number][3] == 'float':
-                float(value)
+            if list_form[number][4] == '*':
+                if value == '':
+                    raise AttributeError
+                else:
+                    if list_form[number][3] == 'int':
+                        int(value)
+                    if list_form[number][3] == 'float':
+                        float(value)
+            else:
+                if value == '':
+                    continue
+                else:
+                    if list_form[number][3] == 'int':
+                        int(value)
+                    if list_form[number][3] == 'float':
+                        float(value)
 
         except ValueError:
             message_result = str('Данные не приняты.\nСписок ошибок:')
@@ -44,6 +56,19 @@ def result_window(event):  # Функция окна результатов
             # Генерирование списка ошибок:
             message = str(str(error_number) + '. Значение в поле "' + list_form[number][1] +
                           '" не соответствует типу данных "' + list_form[number][3] + '".')
+
+            globals()['error%d' % number] = Label(res_window, text=message)
+            globals()['error%d' % number].grid(row=number+1, column=0, padx=20, pady=1)
+            error_number += 1
+
+        except AttributeError:
+            message_result = str('Данные не приняты.\nСписок ошибок:')
+            result_text = Label(res_window, text=message_result)
+            result_text.grid(row=0, column=0, padx=20, pady=5)
+
+            # Генерирование списка ошибок:
+            message = str(str(error_number) + '. Поле "' + list_form[number][1] +
+                          '" должно быть заполнено.')
 
             globals()['error%d' % number] = Label(res_window, text=message)
             globals()['error%d' % number].grid(row=number+1, column=0, padx=20, pady=1)
@@ -91,7 +116,10 @@ for number, line in enumerate(list_form):
     globals()['label%d' % number].grid(row=number, column=0, padx=20, pady=5)
 
     globals()['entry%d' % number] = Entry(fields_frame, width=50, bd=2)  # value
-    globals()['entry%d' % number].grid(row=number, column=1, padx=20, pady=5)
+    globals()['entry%d' % number].grid(row=number, column=1, padx=0, pady=5)
     globals()['entry%d' % number].insert(0, line[2])  # Значение по умолчанию (введенное или из базы данных)
+
+    globals()['prompt%d' % number] = Label(fields_frame, text=line[4])  # display_label
+    globals()['prompt%d' % number].grid(row=number, column=2, padx=10, pady=5)
 
 main_window.mainloop()

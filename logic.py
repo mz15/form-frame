@@ -92,6 +92,12 @@ def create_list_form():
                     list_form_single.append(request_list[b][1])
 
                 list_form_single.append(database[a][3])
+
+                if request_list[b][1] == ':':
+                    list_form_single.append('*')
+                else:
+                    list_form_single.append('')
+
                 list_form.append(list_form_single)
     """
     # Пример результата:
