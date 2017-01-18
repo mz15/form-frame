@@ -11,7 +11,20 @@ def result_window(event):  # Функция окна результатов
     result_text = Label(res_window, text='Данные приняты')  # display_label
     result_text.pack()
 
+    # saving_data()
+
+    list_result = []
+    for number, line in enumerate(list_form):
+        list_result_single = []
+        list_result_single.append(list_form[number][0])
+        list_result_single.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
+        list_result.append(list_result_single)
+        file = 'result.txt'
+        with open(file, 'w') as f:
+            f.write(str(list_result))
+
     res_window.mainloop()
+
 
 main_window = Tk()
 main_window.title("Фрейм-анкета")
@@ -39,9 +52,9 @@ list_form = [
     ['$O.U', 'Участок', '123', 'int']
 ]
 """
+
 # Создание полей
-number = 1
-for line in list_form:
+for number, line in enumerate(list_form):
     # print('$prefix.name:', line[0]
     # print('Отображаемое имя:', line[1])
     # print('Значение:', line[2])
@@ -55,7 +68,19 @@ for line in list_form:
     globals()['entry%d' % number].insert(0, line[2])  # Значение по умолчанию (введенное или из базы данных)
 
     # TODO  проверка ввода на соответствие нужному типу данных
+"""
+list_result = []
+for number, line in enumerate(list_form):
+    # print('$prefix.name:', line[0]
+    # print('Отображаемое имя:', line[1])
+    # print('Значение:', line[2])
+    # print('Тип:', line[3])
+    list_result.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
 
-    number += 1
+    file = 'result.txt'
+    with open(file, 'w') as f:
+        f.write(str(list_result))
+
+"""
 
 main_window.mainloop()

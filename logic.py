@@ -43,10 +43,7 @@ while True:  # Цикл, пока ввод не будет корректен
         #     f.write(request_form)
 
         """ Пример запроса:
-        $O.C=30;$O.U=11;
-        $O.C=;$O.U=:;
-        $O.C=;$O.U=12;
-        $O.C=11;$O.U=:;
+        $O.C=30;$O.U=11;$O.T=;$O.U=:;$O.C=;$Z.L=12;$O.C=11;$O.U=:;
         """
 
         request_list1 = re.split(';', request_form)
@@ -109,14 +106,18 @@ def input_check():
 
 # Сохранение введенных значений в текстовых полях фрейм-анкеты
 def saving_data():
-    # TODO сделать
-    # number = 1
-    for number in range(len(list_form)):
+    # TODO доделать
+
+    list_result = []
+    for number, line in enumerate(list_form):
         # print('$prefix.name:', line[0]
         # print('Отображаемое имя:', line[1])
         # print('Значение:', line[2])
         # print('Тип:', line[3])
-
-        globals()['entry%d' % number].get()  # Получение значения из текстового поля
-
-        number += 1
+        list_result_single = []
+        list_result_single.append(list_form[number][0])
+        list_result_single.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
+        list_result_single.append(list_result)
+        file = 'result.txt'
+        with open(file, 'w') as f:
+            f.write(list_result)
