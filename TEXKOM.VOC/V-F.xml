@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список реквизитов пpедпpиятия" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="F.K" Q.FRMT="X(10)" Q.NM="Код (шифp) пpедпpиятия" Q.K="" />
+    <ROW RowState="4" Q.NAME="F.TXT" Q.FRMT="X(60)" Q.NM="Текст" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

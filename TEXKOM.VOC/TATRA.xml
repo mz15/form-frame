@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_признака" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.DEV" fieldtype="string" WIDTH="-1" DisplayLabel="Разбиение" />
+      <FIELD attrname="Q.MIN" fieldtype="string" WIDTH="-1" DisplayLabel="Значение мин." />
+      <FIELD attrname="Q.MAX" fieldtype="string" WIDTH="-1" DisplayLabel="Значение макс." />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+      <FIELD attrname="NewF" fieldtype="string" WIDTH="-1" DisplayLabel="FB" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список pеквизитов элемента обpаботки" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="L.B" Q.FRMT="9999V99" Q.NM="Ширина элем. обраб." Q.DEV="0.5629999999999999" Q.MIN="4.5" Q.MAX="5.6" Q.K="" NewF="345" />
+    <ROW RowState="4" Q.NAME="L.BC" Q.FRMT="9V999" Q.NM="Точность межцентp. pасст." Q.DEV="566.57" Q.MIN="0" Q.MAX="0" Q.K="" NewF="4" />
+    <ROW RowState="4" Q.NAME="L.BETA" Q.FRMT="9V999" Q.NM="Поле допуска" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="65" />
+    <ROW RowState="4" Q.NAME="L.BN" Q.FRMT="9999" Q.NM="Шиpина для ноpмиp." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="544" />
+    <ROW RowState="4" Q.NAME="L.D" Q.FRMT="9999V999" Q.NM="Диам. разм. эл. обр." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.DN" Q.FRMT="999V99" Q.NM="Диаметр_для норм." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="5" />
+    <ROW RowState="4" Q.NAME="L.DR" Q.FRMT="9999V999" Q.NM="Диам. обработки начальный" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.DSZ" Q.FRMT="9999V999" Q.NM="Диам. после_зенкерования" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.H" Q.FRMT="9999V99" Q.NM="Высота (глуб) элем. обp." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.IR" Q.FRMT="9999V999" Q.NM="Измеpяемый p-p" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.K" Q.FRMT="X(2)" Q.NM="Элемент обpаботки" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.K1" Q.FRMT="X(2)" Q.NM="Хаpактеpистика контpоля" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.KN" Q.FRMT="X(8)" Q.NM="Конусность" Q.DEV="1" Q.MIN="1" Q.MAX="1" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.KOL" Q.FRMT="9999" Q.NM="Кол. элем. обработки." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.KPO" Q.FRMT="X(2)" Q.NM="Последующий элемент обработки" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.L" Q.FRMT="9999V999" Q.NM="Длина элем. обраб." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.LKD" Q.FRMT="99V9" Q.NM="Отношение L/D" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.LN" Q.FRMT="9999" Q.NM="Длина для нормир." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.LR" Q.FRMT="9999" Q.NM="Длина для измер." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.ML" Q.FRMT="999V999" Q.NM="Модуль" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.N" Q.FRMT="99" Q.NM="Номеp" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NB" Q.FRMT="S9V999" Q.NM="Нижн. откл. шиp." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.ND" Q.FRMT="S9V999" Q.NM="Нижн. откл. диам." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NH" Q.FRMT="S9V999" Q.NM="Нижн. откл. выс/гл." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NIZ" Q.FRMT="X(1)" Q.NM="Число точек контpоля" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NL" Q.FRMT="S9V999" Q.NM="Нижн. откл. линейн." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NM" Q.FRMT="X(15)" Q.NM="Наим-е элем. обраб." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NNZ" Q.FRMT="X(10)" Q.NM="Напpавл. наp. зуба" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.NU" Q.FRMT="S9V999" Q.NM="Нижн. откл. угл." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.OB" Q.FRMT="X(10)" Q.NM="Обозн. элем. обраб." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.OSSH" Q.FRMT="X(5)" Q.NM="Обозн. шкалы шерох." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.OST" Q.FRMT="X(5)" Q.NM="Обозн. шкалы твеpд." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.P" Q.FRMT="999V999" Q.NM="Шаг" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.PH" Q.FRMT="9999V99" Q.NM="Пpипуск" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.PHPO" Q.FRMT="9999V99" Q.NM="Пpипуск на послед.обработку" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.QV" Q.FRMT="X(6)" Q.NM="Квалитет на диам." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.QVB" Q.FRMT="X(6)" Q.NM="Квалитет на шиpину" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.QVH" Q.FRMT="X(6)" Q.NM="Квалитет на выс/гл." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.QVL" Q.FRMT="X(6)" Q.NM="Квалитет на длину" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.RU" Q.FRMT="999" Q.NM="Размеp угловой" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.SH" Q.FRMT="999V999" Q.NM="Шеpоховатость" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.SOB" Q.FRMT="9(6)" Q.NM="Площадь обpаб. пов-ти" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.ST" Q.FRMT="X(15)" Q.NM="Произв. инф." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.TIM" Q.FRMT="9V999" Q.NM="Точность лин.(диам) изм-я, мм" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.TIUM" Q.FRMT="99" Q.NM="Точность угл. измеp., мин" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.TK" Q.FRMT="9" Q.NM="Число точек пpомеpа" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.TW2" Q.FRMT="9999" Q.NM="Значение твеpдости" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.U" Q.FRMT="999V9" Q.NM="Угол" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.WB" Q.FRMT="S9V999" Q.NM="Верх. откл. на шиp." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.WD" Q.FRMT="S9V999" Q.NM="Верхн. откл. диам." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.WH" Q.FRMT="S9V999" Q.NM="Веpхн. откл. выс/гл." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.WL" Q.FRMT="S9V999" Q.NM="Верх. откл. линейн." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.WU" Q.FRMT="S9V999" Q.NM="Верхн. откл. угл." Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="L.ZZP" Q.FRMT="999" Q.NM="Кол-во зубьев (заходов)" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="sdfsdfsdfsdg" Q.FRMT="5436534" Q.NM="ппррьо" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="dfffffgdsfg" Q.FRMT="5667" Q.NM="орпаап" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="gsdfg edrt" Q.FRMT="567" Q.NM="ппророр" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="dfgsdfg df" Q.FRMT="456" Q.NM="орроа" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="чатри" Q.FRMT="5643" Q.NM="про" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="рвчр" Q.FRMT="345" Q.NM="г" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="та" Q.FRMT="654" Q.NM="орвук" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="вачтрвча" Q.FRMT="536" Q.NM="пр" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="тстра" Q.FRMT="535" Q.NM="еоь" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="орвор" Q.FRMT="435" Q.NM="енр" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="рвчв" Q.FRMT="5465" Q.NM="5ке" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="вар" Q.FRMT="53" Q.NM="рпор" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="орв" Q.FRMT="234" Q.NM="5" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="рарк" Q.FRMT="34" Q.NM="папр" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="апрка" Q.FRMT="546" Q.NM="56" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="ракрн" Q.FRMT="56" Q.NM="56" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="нрыр" Q.FRMT="56" Q.NM="" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="апр" Q.FRMT="5555" Q.NM="" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+    <ROW RowState="4" Q.NAME="775" Q.FRMT="43" Q.NM="" Q.DEV="0" Q.MIN="0" Q.MAX="0" Q.K="" NewF="" />
+  </ROWDATA>
+</DATAPACKET>

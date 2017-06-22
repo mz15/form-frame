@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_pеквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список_параметров абразивного нструмента" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="Y.DN" Q.FRMT="9999" Q.NM="Наружный диаметр круга" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.H" Q.FRMT="999" Q.NM="Высота круга" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.KU" Q.FRMT="X(3)" Q.NM="Класс неуравновешенности" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.MMR" Q.FRMT="X(8)" Q.NM="Марка абразива" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.NS" Q.FRMT="X(1)" Q.NM="Номер структуры" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.ST" Q.FRMT="X(5)" Q.NM="Степень твердости" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.SV" Q.FRMT="X(3)" Q.NM="Связка" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.TIP" Q.FRMT="X(4)" Q.NM="Тип круга" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.VR" Q.FRMT="X(8)" Q.NM="Рабочая скорость" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.ZR" Q.FRMT="X(5)" Q.NM="Зернистость" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.IST" Q.FRMT="X(15)" Q.NM="Источник инфомации" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.MSH1" Q.FRMT="99" Q.NM="Метод шлифования (код)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.MSH2" Q.FRMT="99" Q.NM="Обрабатываемый матер.(работа абр. инстр)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.MSH3" Q.FRMT="99" Q.NM="Термообработка (работа абр. инстр.)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.MSH4" Q.FRMT="99" Q.NM="Виды шлифования" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.OB" Q.FRMT="X(15)" Q.NM="Обозначение" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.NM" Q.FRMT="X(20)" Q.NM="Наименование" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.DP" Q.FRMT="9999" Q.NM="Посадочный диаметр" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.TXT" Q.FRMT="X(80)" Q.NM="Текст по абр.инстр. в документации" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.ATXT" Q.FRMT="X(80)" Q.NM="Текст по абр.инстр. в ИПС" Q.K="" />
+    <ROW RowState="4" Q.NAME="Y.VO" Q.FRMT="X(80)" Q.NM="Текст по абр.инстр. в ВО" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

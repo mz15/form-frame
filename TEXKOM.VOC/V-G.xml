@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список системных имен" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="G.FILE" Q.FRMT="X(12)" Q.NM="Наименование файла сценариев" Q.K="" />
+    <ROW RowState="4" Q.NAME="G.NAME" Q.FRMT="X(65)" Q.NM="Наименование базы" Q.K="" />
+    <ROW RowState="4" Q.NAME="G.PRUL" Q.FRMT="X(6)" Q.NM="Параметр правила" Q.K="" />
+    <ROW RowState="4" Q.NAME="G.REG" Q.FRMT="99" Q.NM="Режим" Q.K="" />
+    <ROW RowState="4" Q.NAME="G.REGN" Q.FRMT="X(25)" Q.NM="Наименование режима" Q.K="" />
+    <ROW RowState="4" Q.NAME="G.RUL" Q.FRMT="X(10)" Q.NM="Правило" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

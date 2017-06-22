@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список реквизитов пpиспособления" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="H.BP" Q.FRMT="9999" Q.NM="Ширина очищаемой пов-ти" Q.K="" />
+    <ROW RowState="4" Q.NAME="H.KUD" Q.FRMT="99" Q.NM="Кол-во устанавливаемых деталей" Q.K="" />
+    <ROW RowState="4" Q.NAME="H.LP" Q.FRMT="9999" Q.NM="Длина очищаемой пов-ти" Q.K="" />
+    <ROW RowState="4" Q.NAME="H.NM" Q.FRMT="X(60)" Q.NM="Наименование" Q.K="" />
+    <ROW RowState="4" Q.NAME="H.OB" Q.FRMT="X(15)" Q.NM="Обозначение" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_pеквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список_параметров режущего инструмента" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="E.ADN" Q.FRMT="9999" Q.NM="Наружный диаметр круга" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.AH" Q.FRMT="999" Q.NM="Высота круга" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.AKU" Q.FRMT="X(3)" Q.NM="Класс неуравновешенности" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ALF" Q.FRMT="99V99" Q.NM="Задний угол" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.AMMR" Q.FRMT="X(8)" Q.NM="Марка абразива" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ANS" Q.FRMT="X(1)" Q.NM="Номер структуры" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.AST" Q.FRMT="X(5)" Q.NM="Степень твердости" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ASV" Q.FRMT="X(3)" Q.NM="Связка" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ATIP" Q.FRMT="X(4)" Q.NM="Тип круга" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ATXT" Q.FRMT="X(60)" Q.NM="Tекст" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.AVR" Q.FRMT="X(8)" Q.NM="Рабочая скорость" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.AZR" Q.FRMT="X(5)" Q.NM="Зернистость" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.BD" Q.FRMT="9999" Q.NM="Ширина державки" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.BP" Q.FRMT="999V99" Q.NM="Ширина перемычки" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.BRK" Q.FRMT="999V99" Q.NM="Ширина главн.реж.кр." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.BWK" Q.FRMT="99V99" Q.NM="Ширина вспом.реж.кр." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.CI" Q.FRMT="9(5)" Q.NM="Стоимость" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.CTIP" Q.FRMT="X(8)" Q.NM="Пост.часть.типа инст" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.D" Q.FRMT="9999V99" Q.NM="Диаметр" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.D1" Q.FRMT="9999V99" Q.NM="Диаметр обр. первый" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.D2" Q.FRMT="9999V99" Q.NM="Диаметр обр. второй" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.D3" Q.FRMT="9999V99" Q.NM="Диаметр обр. третий" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DC" Q.FRMT="999V99" Q.NM="Диам. цапфы" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DH" Q.FRMT="9999V999" Q.NM="Диам. хвостовика" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DHC" Q.FRMT="999V99" Q.NM="Диам. хвостовика цапфы" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DMR" Q.FRMT="9999V99" Q.NM="Диам.наим.внутр.обраб." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DNP" Q.FRMT="9999V99" Q.NM="Диам. переднего нап." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DNS" Q.FRMT="9999V99" Q.NM="Диам. среднего  нап." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DNZ" Q.FRMT="9999V99" Q.NM="Диам. заднего   нап." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DP" Q.FRMT="9999V999" Q.NM="Диам. посад. хвост." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DPO" Q.FRMT="9999V999" Q.NM="Диам. посад. отв." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DPOR" Q.FRMT="9999" Q.NM="Диам. пос.отв.резьб." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DRK" Q.FRMT="S9V99" Q.NM="Допуск на R шлиф. кpуга" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DWR" Q.FRMT="9999V99" Q.NM="D.наиб.для внутр.обраб." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DZB" Q.FRMT="999V99" Q.NM="Диам. заточки наиб." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.DZM" Q.FRMT="999V99" Q.NM="Диам. заточки наим." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.FI" Q.FRMT="999" Q.NM="Главн. угол в плане" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.FI1" Q.FRMT="999" Q.NM="Вспом. угол в плане" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.FTD" Q.FRMT="X(45)" Q.NM="Формат записи" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.GAM" Q.FRMT="999" Q.NM="Передний угол" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.HD" Q.FRMT="999" Q.NM="Высота деpжавки" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.H" Q.FRMT="999" Q.NM="Высота" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.HW" Q.FRMT="99" Q.NM="Хвостовик pеж. инстp. (код)" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.IST" Q.FRMT="X(15)" Q.NM="Источник инфомации" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.KN" Q.FRMT="X(7)" Q.NM="Конусность" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.KOL" Q.FRMT="999" Q.NM="Количество" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.KTM" Q.FRMT="99" Q.NM="Группа инстр. материала" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.KTR" Q.FRMT="9(7)" Q.NM="Инструмент" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.KZ" Q.FRMT="999" Q.NM="Количество зубьев" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.L" Q.FRMT="9999V999" Q.NM="Длина" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.LPM" Q.FRMT="9(4)" Q.NM="Длина посадочн.места" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.LR" Q.FRMT="9(4)" Q.NM="Длина режущей части" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.LR1" Q.FRMT="9999V999" Q.NM="Длина обр. первая" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.LR2" Q.FRMT="9999V999" Q.NM="Длина обр. вторая" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.LR3" Q.FRMT="9999V999" Q.NM="Длина обр. третья" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ML" Q.FRMT="99V999" Q.NM="Модуль" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.MMR" Q.FRMT="X(12)" Q.NM="Марка мат.реж.части" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.MSH1" Q.FRMT="99" Q.NM="Метод шлифования (код)" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.MSH2" Q.FRMT="99" Q.NM="Обрабатываемый матер.(работа абр. инстр)" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.MSH3" Q.FRMT="99" Q.NM="Термообработка (работа абр. инстр.)" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.MSH4" Q.FRMT="99" Q.NM="Виды шлифования" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ND" Q.FRMT="S9V999" Q.NM="Нижн. откл. диам." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.NK" Q.FRMT="999" Q.NM="Номер конуса" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.NKC" Q.FRMT="999" Q.NM="Номер конуса цапфы" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.NL" Q.FRMT="S9V999" Q.NM="Нижн.откл. линейн." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.NM" Q.FRMT="X(12)" Q.NM="Наименование инстр." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.OB" Q.FRMT="X(15)" Q.NM="Обозначение" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.P" Q.FRMT="999V999" Q.NM="Шаг" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.P1" Q.FRMT="999V999" Q.NM="Шаг min" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.P2" Q.FRMT="999V999" Q.NM="Шаг max" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.REZ" Q.FRMT="9" Q.NM="Резьбы обраб-е" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.RW" Q.FRMT="999V99" Q.NM="Радиус при вершине" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.RWP" Q.FRMT="9(4)" Q.NM="Расст. от подошвы до вершины" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.TI" Q.FRMT="999" Q.NM="Стойкость" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.TIP" Q.FRMT="9" Q.NM="Тип" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.TXT" Q.FRMT="X(99)" Q.NM="Строка в ОК и МК о реж. инстр." Q.K="" />
+    <ROW RowState="4" Q.NAME="E.UWR" Q.FRMT="99" Q.NM="Угол врезки пластины" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.VI" Q.FRMT="9(4)" Q.NM="Вылет" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.VO" Q.FRMT="X(80)" Q.NM="Строка в ВО по режущему инструменту" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ZP" Q.FRMT="99" Q.NM="Число заходов" Q.K="" />
+    <ROW RowState="4" Q.NAME="E.ZZP" Q.FRMT="999" Q.NM="Число зубьев" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

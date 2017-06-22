@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список pеквизитов детали" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="D.D" Q.FRMT="9999V99" Q.NM="Диаметp" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.L" Q.FRMT="9999V99" Q.NM="Длина" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.LKD" Q.FRMT="9" Q.NM="Отношение L детали к ее D" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.MAS" Q.FRMT="99999V999" Q.NM="Масса детали" Q.K="" />
+    <ROW RowState="4" Q.NAME="dsa" Q.FRMT="X(20)" Q.NM="Наименование детали" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.NM1" Q.FRMT="X(20)" Q.NM="" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.NM2" Q.FRMT="X(20)" Q.NM="" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.OB" Q.FRMT="X(24)" Q.NM="Обозначение детали" Q.K="" />
+    <ROW RowState="4" Q.NAME="D.OSSH" Q.FRMT="X(2)" Q.NM="Обозн. шкалы шеpох." Q.K="" />
+    <ROW RowState="4" Q.NAME="D.OST" Q.FRMT="X(5)" Q.NM="Обозн. шкалы твеpд." Q.K="" />
+    <ROW RowState="4" Q.NAME="D.SH" Q.FRMT="999V999" Q.NM="Значение шеpох." Q.K="" />
+    <ROW RowState="4" Q.NAME="D.TW1" Q.FRMT="9999" Q.NM="Твеpдость миним." Q.K="" />
+    <ROW RowState="4" Q.NAME="D.TW2" Q.FRMT="9999" Q.NM="Твеpдость максим." Q.K="" />
+    <ROW RowState="4" Q.NAME="D.VI" Q.FRMT="9999" Q.NM="Вылет" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_pеквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Таблица параметров_конфигурации системы" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="Q.ANK" Q.FRMT="X(78)" Q.NM="Анкета" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.B1" Q.FRMT="99" Q.NM="Номер строки начала печати на 1 листе" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.B2" Q.FRMT="99" Q.NM="Номер строки начала печати на 2 листе" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.BASE" Q.FRMT="X(12)" Q.NM="Имя базы" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.CONC" Q.FRMT="99" Q.NM="Служебный параметр конкатенации ключа" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.DELY" Q.FRMT="999999" Q.NM="Визуальное время задержки в диалоге" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.DSK" Q.FRMT="X(2)" Q.NM="Драйвер_диска" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.DSR" Q.FRMT="X(39)" Q.NM="Описание базы" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.EXE" Q.FRMT="X(40)" Q.NM="Директорий(путь) с системными файлами" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.FRMT" Q.FRMT="X(40)" Q.NM="Формат" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.GR" Q.FRMT="X(40)" Q.NM="Идентификация ТБД" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.HDGR" Q.FRMT="X(40)" Q.NM="Указание на идентификацию ТБД" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.IPS" Q.FRMT="X(40)" Q.NM="Директорий(путь) с вспом.файлами ИПС" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.K" Q.FRMT="X(3)" Q.NM="Код ревизита" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.KOD" Q.FRMT="9" Q.NM="Код режима проектирования" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.MASK" Q.FRMT="X(25)" Q.NM="Имя маски для ИПС" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.MNUM" Q.FRMT="9" Q.NM="Способ нумерации таблиц(1-станд.;2-&gt;ТФ)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.MODR" Q.FRMT="9" Q.NM="Способ ввода доп.инф.(0-свобод;1-анкета)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.MODW" Q.FRMT="9" Q.NM="Режим работы (1-автономно, 2-в системе)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.N1" Q.FRMT="99" Q.NM="Число строк на первом листе документа" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.N2" Q.FRMT="99" Q.NM="Число строк на листе продолжения" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NAME" Q.FRMT="X(6)" Q.NM="Именованное данное" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NBT" Q.FRMT="X(60)" Q.NM="Наименование базы" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NM" Q.FRMT="X(40)" Q.NM="Наименование" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NOUT" Q.FRMT="X(12)" Q.NM="Имя файла документа" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NPOS" Q.FRMT="X(20)" Q.NM="Наименование режима" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NUM" Q.FRMT="99" Q.NM="Номер или признак нумерации переходов" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NUMA" Q.FRMT="999" Q.NM="Номер анкеты" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.NUMK" Q.FRMT="9999" Q.NM="Номер  из ключа" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.PANK" Q.FRMT="X(13)" Q.NM="Имя программы формирования анкеты доп.хр" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.POS" Q.FRMT="X(10)" Q.NM="Таблица конфигурации" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.PTBL" Q.FRMT="99" Q.NM="Мин. число_таблиц в периоде" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.PTIM" Q.FRMT="99999" Q.NM="Период работы до сохран. информации(ceк)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.SCAN" Q.FRMT="9" Q.NM="Способ выхода на Т:0-после скан-я;1-имяТ" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.SCE" Q.FRMT="X(40)" Q.NM="Имя файла сценариев по форм-ю имени T" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.SQRT" Q.FRMT="X(12)" Q.NM="Имя корневой Т при формировании имен" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.SSTR" Q.FRMT="9999" Q.NM="Начальная длина виртуальной строки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.STRC" Q.FRMT="X(99)" Q.NM="Текст без  переноса" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.TANK" Q.FRMT="X(13)" Q.NM="Имя файла-анкеты для доп. характеристик" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.TEX" Q.FRMT="X(10)" Q.NM="Таблица конфигурации" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.THLP" Q.FRMT="X(40)" Q.NM="Имя файла подсказок для работы с ТБД" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.TVOC" Q.FRMT="X(40)" Q.NM="Имя файла словарной базы" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.TXT" Q.FRMT="X(99)" Q.NM="Текст с переносом (перехода)" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.TYP" Q.FRMT="9" Q.NM="Тип" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.VSP" Q.FRMT="X(40)" Q.NM="Директорий(путь) с файлами VSP" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.Z" Q.FRMT="X(50)" Q.NM="Значение" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.ZAGA" Q.FRMT="X(35)" Q.NM="Заголовок анкеты" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.SFLO" Q.FRMT="S999V99" Q.NM="Вещ-е со знаком" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.SINT" Q.FRMT="S9999" Q.NM="Целое со знаком" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.LONG" Q.FRMT="X(300)" Q.NM="Длинный текст" Q.K="" />
+    <ROW RowState="4" Q.NAME="Q.LNG2" Q.FRMT="X(200)" Q.NM="Длинный текст2" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список реквизитов заготовки" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="Z.B" Q.FRMT="9999V99" Q.NM="Ширина исходной заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.D" Q.FRMT="9999V99" Q.NM="Диаметp заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.H" Q.FRMT="9999V99" Q.NM="Высота" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.K" Q.FRMT="X(14)" Q.NM="Код (вид) заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.KD" Q.FRMT="9999" Q.NM="Количество деталей из заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.L" Q.FRMT="9999V99" Q.NM="Длина исходной заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.MAS" Q.FRMT="9999V999" Q.NM="Масса заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.OST" Q.FRMT="X(5)" Q.NM="Обозн. шкалы тв-ти" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.PR" Q.FRMT="X(15)" Q.NM="Пpофиль" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.STS" Q.FRMT="9999V99" Q.NM="Толщина стенки заготовки" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.TW1" Q.FRMT="9999" Q.NM="Твеpдость min" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.TW2" Q.FRMT="9999" Q.NM="Твеpдость max" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.NRM" Q.FRMT="999V999999" Q.NM="Норма расхода" Q.K="" />
+    <ROW RowState="4" Q.NAME="Z.KIM" Q.FRMT="9V9999" Q.NM="КИМ" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

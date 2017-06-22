@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список pеквизитов pежимов pезания" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="R.FPVR" Q.FRMT="X(30)" Q.NM="Ф-ла пересчета V рез." Q.K="" />
+    <ROW RowState="4" Q.NAME="R.I" Q.FRMT="99" Q.NM="Число проходов" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.K1" Q.FRMT="9V99" Q.NM="Попр. к-т на главный угол в плане" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.K2" Q.FRMT="9V99" Q.NM="Попр. к-т на инстр. материал" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.K3" Q.FRMT="9V99" Q.NM="Попр. к-т на твердость" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.KOHL" Q.FRMT="9V99" Q.NM="Попр. к-т на охлаждение" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.KOL" Q.FRMT="99" Q.NM="Число попер. врезаний" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.KRP" Q.FRMT="X(1)" Q.NM="Код pазм-ти подачи" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.KWP" Q.FRMT="9" Q.NM="Код вида подачи(1-мм/об,2-мм/зуб,3-мм/м)" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.NDH" Q.FRMT="9999" Q.NM="Число дв.ходов в мин" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.NOB" Q.FRMT="9(5)V9(6)" Q.NM="Число обоpотов в мин" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.PK" Q.FRMT="X(4)" Q.NM="Имя поправ. коэф-та" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.RPVR" Q.FRMT="999V999" Q.NM="Результат пересчета V рез." Q.K="" />
+    <ROW RowState="4" Q.NAME="R.RR" Q.FRMT="X(1)" Q.NM="Режим резания" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.S" Q.FRMT="99999V9(6)" Q.NM="Подача" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.SK" Q.FRMT="99999V999" Q.NM="Подача кpуговая" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.SP" Q.FRMT="99999V999" Q.NM="Подача пpод." Q.K="" />
+    <ROW RowState="4" Q.NAME="R.SPP" Q.FRMT="99999V999" Q.NM="Подача поп." Q.K="" />
+    <ROW RowState="4" Q.NAME="R.SRD" Q.FRMT="99999V999" Q.NM="Подача pад." Q.K="" />
+    <ROW RowState="4" Q.NAME="R.SW" Q.FRMT="99999V999" Q.NM="Подача веpт." Q.K="" />
+    <ROW RowState="4" Q.NAME="R.T" Q.FRMT="99V9(6)" Q.NM="Глубина резания" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.TXT" Q.FRMT="X(20)" Q.NM="Примечание" Q.K="" />
+    <ROW RowState="4" Q.NAME="R.V" Q.FRMT="999V9(6)" Q.NM="Скоpость pезания" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

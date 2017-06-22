@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список реквизитов базы" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="B.NM" Q.FRMT="X(6)" Q.NM="Имя таблицы списка баз" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.NN" Q.FRMT="X(15)" Q.NM="Параметр правила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.PK" Q.FRMT="X(15)" Q.NM="Параметр правила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.R" Q.FRMT="X(60)" Q.NM="Пpавило" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.RR" Q.FRMT="X(15)" Q.NM="Параметр правила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.SS" Q.FRMT="X(15)" Q.NM="Параметр правила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TABR" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TEQ" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TI" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TM" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TW" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TR" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TPR" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TS" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TT" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TV" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TPZ" Q.FRMT="X(15)" Q.NM="Паpаметp пpавила" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.TXT" Q.FRMT="X(65)" Q.NM="Текст" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.WAY" Q.FRMT="X(10)" Q.NM="Путь" Q.K="" />
+    <ROW RowState="4" Q.NAME="B.WAY1" Q.FRMT="X(10)" Q.NM="Путь (в модуле нормирования)" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATAPACKET Version="2.0">
+  <METADATA>
+    <FIELDS>
+      <FIELD attrname="Q.NAME" fieldtype="string" WIDTH="-1" DisplayLabel="Имя_реквизита" />
+      <FIELD attrname="Q.FRMT" fieldtype="string" WIDTH="-1" DisplayLabel="Формат" />
+      <FIELD attrname="Q.NM" fieldtype="string" WIDTH="-1" DisplayLabel="Наименование" />
+      <FIELD attrname="Q.K" fieldtype="string" WIDTH="-1" DisplayLabel="Код_реквизита" />
+    </FIELDS>
+    <PARAMS CAPTION_TABLE="Список СОЖ" AdditionChar="$A.BLD='1';//" />
+  </METADATA>
+  <ROWDATA>
+    <ROW RowState="4" Q.NAME="C.IST" Q.FRMT="X(45)" Q.NM="ГОСТ или ТУ" Q.K="" />
+    <ROW RowState="4" Q.NAME="C.NM" Q.FRMT="X(15)" Q.NM="Наименование" Q.K="" />
+    <ROW RowState="4" Q.NAME="C.NMM" Q.FRMT="X(40)" Q.NM="Наименование группы обр. материала" Q.K="" />
+    <ROW RowState="4" Q.NAME="C.PGS" Q.FRMT="99" Q.NM="Обрабатываемый материал" Q.K="" />
+    <ROW RowState="4" Q.NAME="C.PGS2" Q.FRMT="99" Q.NM="Способ обработки" Q.K="" />
+    <ROW RowState="4" Q.NAME="C.SOB" Q.FRMT="X(50)" Q.NM="Группы обработки" Q.K="" />
+  </ROWDATA>
+</DATAPACKET>
