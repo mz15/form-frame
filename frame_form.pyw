@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from tkinter import Tk, Frame, Label, Entry, Button, filedialog, Toplevel, Scrollbar
+from tkinter import Tk, Frame, Label, Entry, Button, filedialog, Toplevel
 from tkinter.messagebox import *
-from lxml import etree
+# from lxml import etree  # Библиотека импортируется в конце кода в блоке try
+
 
 def error_massage_box():
     if error_code == 'file_not_selected':
@@ -151,7 +152,6 @@ def check_values(event):
 
                 except ValueError:  # Если значение не является действительным числом
                     discrepancy.append('1')
-
 
     if discrepancy.count('1') > 0:  # Если есть хотя бы одно значение с неверным форматом
         global error_code
@@ -303,5 +303,12 @@ lbl_text = 'Выберите файл — словарь метаданных в
 lbl = Label(fields_frame, text=lbl_text)  # display_label
 lbl.grid(row=0, column=0, padx=20, pady=5)
 
+try:
+    from lxml import etree
+except ImportError:
+    showerror('Ошибка', 'Внимание! На данном компьютере не установлена библиотека lxml для обработки XML-файлов. '
+                        'Без нее программа не будет корректно работать и не сможет сгенерировать фрейм-анкету. '
+                        'Необходимо установить библиотеку и повторно запустить программу.')
 
 root.mainloop()
+
