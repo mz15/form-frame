@@ -7,14 +7,16 @@ def error_massage_box():
     if error_code == 'file_not_selected':
         msg_title = 'Ошибка. Файл не выбран'
         msg_text = 'Вы не выбрали XML-файл, на основе которого будет сгенерирована фрейм-анкета.'
+
     if error_code == 'file_not_found':
         msg_title = 'Ошибка. Файл не найден'
         msg_text = 'Выбранный XML-файл не найден. Возможно, он был удален или переименован. ' \
                    'Необходимо повторить выбор файла'
-    if error_code == 'file_name_not_entered':
-        msg_title = 'Ошибка. Данные не сохранены'
+
+    if error_code == 'invalid_format':
+        msg_title = 'Ошибка. Неверный формат'
         msg_text = 'Данные не сохранены. ' \
-                   'Необходимо ввести имя нового файла или выбрать существующий, который будет заменен.'
+                   'Одно или несколько значений не соответствуют требуемому формату.'
 
     showerror(msg_title, msg_text)
 
@@ -40,7 +42,6 @@ def choose_file(event):  # Выбор XML-файла
         lbl1.grid(row=1, column=0, padx=20, pady=5)
 
 
-
 def create_list_form():  # Чтение и преобразование данных для генерации фрейм-анкеты
     with open(xml_file, 'rb') as fobj:
 #    with open(xml_file, encoding='utf-8') as fobj:
@@ -64,13 +65,120 @@ def create_list_form():  # Чтение и преобразование данн
 
     return list_form
 
-def save_xml(event):
+def check_values(event):
     list_form = create_list_form()
     list_result = []  # Список с данными, введенными пользователем в текстовые поля
+    discrepancy = []  # Список с кодами наличия ошибки формата: 1 - есть ошибка, 0 - нет ошибки
+
+    for number, line in enumerate(list_form):
+        value = globals()['entry%d' % number].get()  # Получение значения текстового поля
+        list_result.append(value)
+        field_format = globals()['prompt%d' % number]["text"]  # Получение формата
+
+        if len(value) > 0:
+            if field_format.startswith('X('):  # Если формат вида X(10) - текст из 10 любых символов
+                field_format = field_format[2:-1]  # Преобразуем в целое число
+                if len(value) > int(field_format):  # Если кол-во символов в значении больше чем должно быть
+                    discrepancy.append('1')
+                else:
+                    discrepancy.append('0')
+
+            elif field_format.isalpha():  # Если формат вида XXXX - текст из 4 любых символов
+                if len(value) > len(field_format):  # Если кол-во символов в значении больше чем, в формате
+                    discrepancy.append('1')
+                else:
+                    discrepancy.append('0')
+
+            elif field_format.isdigit():  # Если формат виде 9999 - четырехзначное целое число
+                if len(value) <= len(field_format) and value.isdigit():  # Если значение соответствует формату
+                    discrepancy.append('0')
+                else:
+                    discrepancy.append('1')
+
+            elif field_format.startswith('9('):  # Если формат виде 9(3) - трехзначное целое число
+                field_format = field_format[2:-1]  # Преобразуем в целое число
+                try:
+                    int(value)
+                    if len(value) > int(field_format):  # Если кол-во символов в значении больше чем должно быть
+                        discrepancy.append('1')
+                    else:
+                        discrepancy.append('0')
+                except ValueError:  # Если значение не является целым числом
+                    discrepancy.append('1')
+
+            elif field_format.find('V') > 0:  # Если формат вида 999V999 или S999V999 - +/- действительное число
+                try:
+                    if field_format.find('S') == -1:  # Если формат вида 999V999 - положительное действительное число
+                        if float(value) < 0:  # Если значение - отрицательное действительное число
+                            discrepancy.append('1')
+                        elif float(value) == 0:  # Если значение - 0
+                            discrepancy.append('0')
+                        else:  # Если значение - положительное действительное число
+                            ff0 = field_format.split('V')[0]  # Целая часть числа в формате
+                            ff1 = field_format.split('V')[1]  # Дробная часть числа в формате
+                            if value.find('.') == -1:  # Если введена только целая часть числа
+                                if len(value) <= len(ff0):  # Если длины целых частей равны
+                                    discrepancy.append('0')
+                                else:
+                                    discrepancy.append('1')
+                            else:  # Если введена целая часть числа и дробная
+                                v0 = value.split('.')[0]  # Целая часть числа в значении
+                                v1 = value.split('.')[1]  # Дробная часть числа в значении
+
+                                if len(v0) <= len(ff0) and len(v1) <= len(ff1): # Если длины частей не превышают формат
+                                    discrepancy.append('0')
+                                else:
+                                    discrepancy.append('1')
+                    elif field_format.find('S') == 0:  # Если формат вида S999V999 - отрицательное действительное число
+                        if float(value) < 0:  # Если значение - отрицательное действительное число
+                            ff0 = field_format.split('V')[0]  # Целая часть числа в формате
+                            ff1 = field_format.split('V')[1]  # Дробная часть числа в формате
+                            if value.find('.') == -1:  # Если введена только целая часть числа
+                                if len(value) <= len(ff0):  # Если длины целых частей равны
+                                    discrepancy.append('0')
+                                else:
+                                    discrepancy.append('1')
+                            else:  # Если введена целая часть числа и дробная
+                                v0 = value.split('.')[0]  # Целая часть числа в значении
+                                v1 = value.split('.')[1]  # Дробная часть числа в значении
+
+                                if len(v0) <= len(ff0) and len(v1) <= len(ff1): # Если длины частей не превышают формат
+                                    discrepancy.append('0')
+                                else:
+                                    discrepancy.append('1')
+                        else:
+                            discrepancy.append('1')
+
+                except ValueError:  # Если значение не является действительным числом
+                    discrepancy.append('1')
+
+
+    if discrepancy.count('1') > 0:  # Если есть хотя бы одно значение с неверным форматом
+        global error_code
+        error_code = 'invalid_format'
+        error_massage_box()
+    else:
+        save_xml()
+
+
+
+#    for element in discrepancy:
+#        if element == 0:
+#            continue
+#        else:
+
+
+
+
+def save_xml():
+    list_form = create_list_form()
+    list_result = []  # Список с данными, введенными пользователем в текстовые поля
+#    list_check = []
 
     for number, line in enumerate(list_form):
         list_result.append(globals()['entry%d' % number].get())  # Получение значения из текстового поля
-
+#        list_check.append(globals()['prompt%d' % number]["text"])  # Получение формата
+#    print(list_check)
     i = 0  # Номер элемента списка list_result
     for DATAPACKET in root.getchildren():  # METADATA, ROWDATA
         for DATA in DATAPACKET.getchildren():  # FIELDS, PARAMS, ROW
@@ -99,8 +207,7 @@ def save_xml(event):
         info_massage_box()
 
     except FileNotFoundError:
-        error_code = 'file_name_not_entered'
-        error_massage_box()
+        pass
 
 def check(event):  # Функция проверки наличия выбранного XML-файла
     global error_code
@@ -141,7 +248,7 @@ def frame_window(event):
                  # fg = "blue"  # Цвет фона и надписи
                  )
     btn.grid(row=0, column=0, padx=0, pady=10)
-    btn.bind("<ButtonRelease-1>", save_xml)  # Вызов функции по нажатию на кнопку
+    btn.bind("<ButtonRelease-1>", check_values)  # Вызов функции по нажатию на кнопку
 
     # Создание полей
     for number, line in enumerate(list_form):
